@@ -13,7 +13,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 class AssertionsTests(unittest.TestCase):
 
     def setUp(self):
-        # Installs the chrome driver (log_level=0: Disables teh log.info for the console)
+        # Installs the chrome driver (log_level=0: Disables the log.info for the console)
         service = ChromeService(
             executable_path=ChromeDriverManager(log_level=0).install())
         self.driver = webdriver.Chrome(service=service)
@@ -37,7 +37,7 @@ class AssertionsTests(unittest.TestCase):
         ##  how: selector type
         ##  what: its value
     def is_element_present(self, how, what):
-        #   Searchs the elements by parameter
+        #   Searches the elements by parameter
         try:
             self.driver.find_element(by=how, value=what)
         except NoSuchElementException as variable:

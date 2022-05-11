@@ -41,15 +41,12 @@ class AddRemoveElements(unittest.TestCase):
                     By.CLASS_NAME, 'added-manually')
                 delete_button.click()
             except:
-                print('You are trying to delete more elements than the existent')
-                break
+                raise ValueError('You are trying to delete more elements than the existent')
 
-        if total_elements > 0:
-            print(f'There are {total_elements} elements on screen')
-        else:
-            print(f'There are 0 elements on screen')
-
-        sleep(3)
+        # if total_elements >= 0:
+        print(f'There are {total_elements} elements on screen')
+        # else:
+        #     print(f'There are 0 elements on screen')
 
     def tearDown(self):
         self.driver.implicitly_wait(3)

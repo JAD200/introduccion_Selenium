@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-class AddRemoveElements(unittest.TestCase):
+class DynamicControls(unittest.TestCase):
 
     def setUp(self):
         # Installs the chrome driver (log_level=0: Disables teh log.info for the console)
